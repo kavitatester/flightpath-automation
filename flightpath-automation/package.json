@@ -1,0 +1,33 @@
+{
+  "name": "flightpath-automation",
+  "version": "1.0.0",
+  "description": "End-to-End Test Automation Framework for Travel Booking — Portfolio Project",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "test": "playwright test",
+    "test:e2e": "playwright test tests/e2e/",
+    "test:api": "playwright test tests/api/",
+    "test:visual": "playwright test tests/visual/",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "lint": "eslint tests/ pages/ utils/",
+    "lint:fix": "eslint tests/ pages/ utils/ --fix"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "allure-playwright": "^3.0.0",
+    "allure-commandline": "^2.29.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-playwright": "^1.6.0",
+    "dotenv": "^16.4.5",
+    "faker": "^5.5.3",
+    "@faker-js/faker": "^8.4.1"
+  }
+}
