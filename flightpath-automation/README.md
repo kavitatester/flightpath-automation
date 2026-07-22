@@ -11,7 +11,7 @@
 
 ## 📌 Overview
 
-FlightPath is a **production-grade test automation framework** built with Playwright and JavaScript. It demonstrates a complete QA strategy for a real-world web application — covering UI end-to-end flows, REST API testing, visual regression, and a fully automated CI/CD pipeline.
+Ecommerce is a **production-grade test automation framework** built with Playwright and JavaScript. It demonstrates a complete QA strategy for a real-world web application — covering UI end-to-end flows, REST API testing, visual regression, and a fully automated CI/CD pipeline.
 
 **Test Site:** [SauceDemo](https://www.saucedemo.com) (E2E) + [Restful Booker](https://restful-booker.herokuapp.com) (API)
 
