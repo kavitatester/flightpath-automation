@@ -37,7 +37,7 @@ env:
   ENV:          ${{ secrets.ENV || 'ci' }}
 
 jobs:
-
+# CI pipeline
   # ── Install & Cache ──────────────────────────────────────────────────────────
   install:
     name: 📦 Install Dependencies
