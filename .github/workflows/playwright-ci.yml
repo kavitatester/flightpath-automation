@@ -41,7 +41,7 @@ jobs:
   # ── Install & Cache ──────────────────────────────────────────────────────────
   install:
     name: 📦 Install Dependencies
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -71,7 +71,7 @@ jobs:
   # ── E2E Tests ────────────────────────────────────────────────────────────────
   e2e-tests:
     name: 🌐 E2E Tests — ${{ matrix.browser }}
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: install
     strategy:
       fail-fast: false
@@ -118,7 +118,7 @@ jobs:
   # ── API Tests ─────────────────────────────────────────────────────────────────
   api-tests:
     name: 🔌 API Tests
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: install
 
     steps:
@@ -154,7 +154,7 @@ jobs:
   # ── Visual Regression ─────────────────────────────────────────────────────────
   visual-tests:
     name: 👁️ Visual Regression
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: install
 
     steps:
@@ -195,7 +195,7 @@ jobs:
   # ── Allure Report ─────────────────────────────────────────────────────────────
   publish-report:
     name: 📊 Publish Allure Report
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: [e2e-tests, api-tests, visual-tests]
     if: always()
 
@@ -231,7 +231,7 @@ jobs:
   # ── Notify on Failure ─────────────────────────────────────────────────────────
   notify:
     name: 🔔 Notify on Failure
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: [e2e-tests, api-tests, visual-tests]
     if: failure()
 
