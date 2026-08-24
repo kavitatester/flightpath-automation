@@ -11,7 +11,7 @@ name: 🎭 Playwright Test Suite
 
 on:
   push:
-    branches: [main, develop]
+    branches: [main, develop,  visual_tetsing]
   pull_request:
     branches: [main]
   schedule:
